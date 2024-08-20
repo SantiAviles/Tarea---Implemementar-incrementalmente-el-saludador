@@ -1,10 +1,14 @@
 <html>
   <body>
-    <form id="hola-nombre">
-      <label for="Nombre">Nombre:</label>
+    <h1>Bot Interactivo</h1>
+    <form id="greeting-form">
+      <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" />
-      <input type="submit" value="Saludar" id="name-button" />
+      <label for="genero">Genero:</label>
+      <input type="text" id="genero">
+      <input type="submit" value="Saludar" id="button" />
     </form>
+
     <div id="resultado-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>

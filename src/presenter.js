@@ -1,12 +1,20 @@
-
-const Nombre = document.querySelector("#nombre");
-const form = document.querySelector("#hola-nombre");
+const nombre = document.querySelector("#nombre");
+const genero = document.querySelector("#genero");
+const form = document.querySelector("#greeting-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const nombre = Nombre.value;
+  let saludo = "Hola ";  // Cambiado a 'let' para permitir la modificación
+  const nombreValue = nombre.value;
+  const generoValue = genero.value;
 
-  div.innerHTML = "<p>Hola, " + nombre + "!</p>";
+  if (generoValue.toLowerCase() === "masculino") {
+    saludo = "Hola Muchacho ";
+  } else if (generoValue.toLowerCase() === "femenino") {
+    saludo = "Hola Muchacha ";
+  }
+
+  div.innerHTML = "<p>" + saludo + nombreValue + "</p>";
 });
